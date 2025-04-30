@@ -82,7 +82,7 @@ def view_from_scores_quintile(
     scores: pd.Series,
     mu_implied: pd.Series,
     scalefactor: int = 252,
-) -> (pd.DataFrame, pd.Series):
+) -> tuple[pd.DataFrame, pd.Series]:
     """
     Generate views based on quintile thresholds of scores.
 
@@ -133,7 +133,7 @@ def view_from_scores_absolute(
     scores: pd.Series,
     mu_implied: pd.Series,
     scalefactor: int = 252,
-) -> (pd.DataFrame, pd.Series):
+) -> tuple[pd.DataFrame, pd.Series]:
     """
     Generate views based on full ranking of scores.
 
@@ -178,7 +178,7 @@ def generate_views_from_scores(
     mu_implied: pd.Series,
     method: str = 'quintile',
     scalefactor: int = 252,
-) -> (pd.DataFrame, pd.Series):
+) -> tuple[pd.DataFrame, pd.Series]:
     """
     Generate views based on scores using the specified method.
 
